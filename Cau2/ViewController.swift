@@ -10,6 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+   
+    @IBOutlet weak var imageView1: UIImageView!
+    
+    @IBOutlet weak var urltxt1: UITextField!
+    
+    @IBOutlet weak var imageView2: UIImageView!
+    
+    @IBOutlet weak var urltxt2: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,7 +28,34 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func ClickLoadImage1(_ sender: Any) {
+        let imageUrl: URL = URL(string: urltxt1.text!)!
+        (URLSession(configuration: URLSessionConfiguration.default)).dataTask(with: imageUrl, completionHandler: {(imageData, response, error) in
+            if let data = imageData {
+                DispatchQueue.main.async {
+                    self.imageView1.image = UIImage(data: data)
+                }
+            }
+            
+        }).resume()
+        
+    }
 
 
+    
+    
+    @IBAction func ClickLoadImage2(_ sender: Any) {
+        let imageUrl: URL = URL(string: urltxt2.text!)!
+        (URLSession(configuration: URLSessionConfiguration.default)).dataTask(with: imageUrl, completionHandler: {(imageData, response, error) in
+            if let data = imageData {
+                DispatchQueue.main.async {
+                    self.imageView2.image = UIImage(data: data)
+                }
+            }
+            
+        }).resume()
+        
+    }
 }
 

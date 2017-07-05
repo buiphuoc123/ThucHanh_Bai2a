@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cau2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,87 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaul" translatesAutoresizingMaskIntoConstraints="NO" id="VkV-ol-Jdg">
+                                <rect key="frame" x="10" y="30" width="355" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="190" id="jAu-Jl-N8D"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="URL 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BHh-9h-ESY">
+                                <rect key="frame" x="10" y="225" width="355" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQ8-ML-1bU">
+                                <rect key="frame" x="10" y="263" width="355" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Load hình 1">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="ClickLoadImage1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qam-MI-UBz"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="URL 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JAF-LX-5VJ">
+                                <rect key="frame" x="10" y="508" width="355" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ql3-aM-fC0">
+                                <rect key="frame" x="10" y="546" width="355" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Load hình 2">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="ClickLoadImage2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VWT-lt-yae"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="defaul" translatesAutoresizingMaskIntoConstraints="NO" id="3RC-I0-joV">
+                                <rect key="frame" x="26" y="310" width="355" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="190" id="3EH-nU-CsL"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3RC-I0-joV" firstAttribute="top" secondItem="NQ8-ML-1bU" secondAttribute="bottom" constant="20" id="0Nq-un-bhm"/>
+                            <constraint firstItem="BHh-9h-ESY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="396-MA-rzm"/>
+                            <constraint firstItem="VkV-ol-Jdg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="3pL-z5-gK1"/>
+                            <constraint firstItem="BHh-9h-ESY" firstAttribute="top" secondItem="VkV-ol-Jdg" secondAttribute="bottom" constant="5" id="5jF-eD-JdK"/>
+                            <constraint firstAttribute="trailing" secondItem="VkV-ol-Jdg" secondAttribute="trailing" constant="10" id="5nw-ty-4S5"/>
+                            <constraint firstItem="VkV-ol-Jdg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="Fzg-4Y-oIr"/>
+                            <constraint firstItem="JAF-LX-5VJ" firstAttribute="top" secondItem="3RC-I0-joV" secondAttribute="bottom" constant="5" id="GoA-nW-nAP"/>
+                            <constraint firstItem="JAF-LX-5VJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="HcX-lN-AIx"/>
+                            <constraint firstItem="3RC-I0-joV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="Nqv-iA-SeZ"/>
+                            <constraint firstAttribute="trailing" secondItem="3RC-I0-joV" secondAttribute="trailing" constant="10" id="SNC-zQ-K1G"/>
+                            <constraint firstItem="NQ8-ML-1bU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="b8i-I4-W2b"/>
+                            <constraint firstAttribute="trailing" secondItem="ql3-aM-fC0" secondAttribute="trailing" constant="10" id="bO5-57-CKY"/>
+                            <constraint firstItem="NQ8-ML-1bU" firstAttribute="top" secondItem="BHh-9h-ESY" secondAttribute="bottom" constant="8" id="cMr-FY-Cxo"/>
+                            <constraint firstAttribute="trailing" secondItem="NQ8-ML-1bU" secondAttribute="trailing" constant="10" id="dmQ-ba-7d3"/>
+                            <constraint firstAttribute="trailing" secondItem="JAF-LX-5VJ" secondAttribute="trailing" constant="10" id="eIg-Br-o8c"/>
+                            <constraint firstItem="ql3-aM-fC0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="leg-Mo-zKX"/>
+                            <constraint firstAttribute="trailing" secondItem="BHh-9h-ESY" secondAttribute="trailing" constant="10" id="qQ0-pH-oqH"/>
+                            <constraint firstItem="ql3-aM-fC0" firstAttribute="top" secondItem="JAF-LX-5VJ" secondAttribute="bottom" constant="8" id="w5x-Su-kg9"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView1" destination="VkV-ol-Jdg" id="2ni-NS-SUb"/>
+                        <outlet property="imageView2" destination="3RC-I0-joV" id="M5t-4N-pS6"/>
+                        <outlet property="urltxt1" destination="BHh-9h-ESY" id="Vfd-DU-y6x"/>
+                        <outlet property="urltxt2" destination="JAF-LX-5VJ" id="K6l-HW-DVg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="423" y="116"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="defaul" width="265" height="265"/>
+    </resources>
 </document>
